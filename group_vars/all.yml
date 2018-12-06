@@ -1,0 +1,11 @@
+---
+ntp_server: "172.30.128.102;172.30.128.54;172.30.128.106"
+realm_name: ANSIBLE.LOCAL
+kdc_port: 88
+master_db_pass: admin129
+kadmin_pass: admin129
+kadmin_user: admin
+private_key: /path/to/keys/my_key # Must be absolute path to your private key
+bastion_ip: publicip (55.55.55.55)
+user: centos
+ansible_ssh_common_args: '-o ProxyCommand="ssh -i {{ private_key }} -W %h:%p -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no {{ user }}@{{ bastion_ip }}"'

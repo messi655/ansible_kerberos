@@ -1,0 +1,12 @@
+
+[kerberos_server]
+master1.ansible.local ansible_ssh_host=172.30.128.102
+
+[ntp_server]
+master1.ansible.local ansible_ssh_host=172.30.128.102
+master1.ansible.local ansible_ssh_host=172.30.128.102
+master2.ansible.local ansible_ssh_host=172.30.128.54
+master3.ansible.local ansible_ssh_host=172.30.128.106
+datanode1.ansible.local ansible_ssh_host=172.30.128.154
+datanode2.ansible.local ansible_ssh_host=172.30.128.50
+datanode3.ansible.local ansible_ssh_host=172.30.128.251

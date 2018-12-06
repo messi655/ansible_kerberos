@@ -1,0 +1,12 @@
+---
+- hosts: kerberos_server
+  remote_user: centos
+  sudo: yes
+  roles:
+    - {role: server, tags: ['server']}
+
+- hosts: ntp_server
+  remote_user: centos
+  sudo: yes
+  roles:
+    - {role: updatentpserver, tags: ['updatentpserver']}

@@ -1,0 +1,12 @@
+---
+- name: restart kerberos
+  service: name={{ item }} state=restarted
+  with_items:
+    - krb5kdc
+    - kadmin
+ 
+- name: restart kerberos ubuntu
+  service: name={{ item }} state=restarted
+  with_items:
+    - krb5-kdc
+    - krb5-admin-server
